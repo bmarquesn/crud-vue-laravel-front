@@ -1,4 +1,4 @@
-# crud-vue-laravel-front
+# front
 
 ## Project setup
 ```

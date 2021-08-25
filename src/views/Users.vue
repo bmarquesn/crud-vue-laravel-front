@@ -20,7 +20,7 @@
 import { mapGetters, mapActions } from "vuex";
 
 export default {
-  name: "Home",
+  name: "Users",
 
   data() {
     return {
@@ -30,24 +30,11 @@ export default {
   },
 
   computed: {
-    ...mapGetters("auth", ["user"])
+
   },
 
   methods: {
-    ...mapActions("auth", ["sendVerifyResendRequest"]),
 
-    verifyResend() {
-      this.success = this.error = null;
-      this.sendVerifyResendRequest()
-        .then(() => {
-          this.success =
-            "A fresh verification link has been sent to your email address.";
-        })
-        .catch(error => {
-          this.error = "Error sending verification link.";
-          console.log(error.response);
-        });
-    }
   }
 };
 </script>
